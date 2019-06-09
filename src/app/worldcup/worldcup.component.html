@@ -1,0 +1,36 @@
+<span
+  ><table id="worldcup">
+    worldcup works!
+    <button (click)="getWinner('India')" class="btn btn-success">
+      getWinner
+    </button>
+    {{
+      winner
+    }}
+  </table>
+</span>
+
+<img [src]="path" class="img-fluid" alt="Responsive image"/>
+
+<table border="2px">
+  <span>
+    <button (click)="togle()" class="btn btn-success">Toggle</button>
+  </span>
+  <span *ngIf="togglewinner">{{ winner }} </span>
+</table>
+
+<!-- <table border="2px" class="container" class="table" align="center"> -->
+<table class="table table-hover table-striped container">
+  <thead>
+    <tr>
+      <th scope="col">Teams</th>
+      <th scope="col">wins</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of teams">
+      <td scope="row">{{ team.name }}</td>
+      <td scope="row">{{ team.wins }}</td>
+    </tr>
+  </tbody>
+</table>
